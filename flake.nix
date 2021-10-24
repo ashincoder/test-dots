@@ -19,18 +19,20 @@
           username = username;
           configuration = { pkgs, config, ... }: {
             xdg.configFile."nix/nix.conf".text = ''
-              experimental-features = nix-command flakes
-            '';
+                            experimental-features = nix-command flakes
+              substituters = https://cache.nixos.org https://cache.nixos.org/ https://nix-community.cachix.org
+              trusted-public-keys = cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs=
+                          '';
             nixpkgs = {
               config = { allowUnfree = true; };
-              overlays = [];
+              overlays = [ ];
             };
             imports = [
-              ./modules/cli.nix
+              ./modules/zathura.nix
               ./modules/git.nix
               ./modules/neovim.nix
-              ./modules/dot.nix
-              ./modules/pkgs.nix
+              ./modules/alacritty.nix
+              ./modules/browser.nix
               ./modules/fonts.nix
             ];
           };

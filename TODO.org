@@ -1,0 +1,4 @@
+* Things to do and make
+** TODO Make an overlay for jonaburg picom
+** TODO Make nix file for packages regarding neovim
+** TODO Make nix file for doom-emacs
