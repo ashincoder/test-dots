@@ -11,7 +11,12 @@
       # Nix tools
       nixfmt
       rnix-lsp
+      # Bash tools
+      shfmt
+      shellcheck2
     ] ++ (with nodePackages; [
+      # Bash lsp
+      bash-language-server
       # Python
       yapf
       pyright

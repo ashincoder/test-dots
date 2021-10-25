@@ -33,7 +33,7 @@
               ./modules/neovim.nix
               ./modules/alacritty.nix
               ./modules/browser.nix
-              ./modules/fonts.nix
+              ./modules/picom.nix
             ];
           };
         };
