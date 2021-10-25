@@ -13,7 +13,7 @@
       rnix-lsp
       # Bash tools
       shfmt
-      shellcheck2
+      shellcheck
     ] ++ (with nodePackages; [
       # Bash lsp
       bash-language-server

@@ -28,6 +28,7 @@
               overlays = [ ];
             };
             imports = [
+              ./modules/modules.nix
               ./modules/zathura.nix
               ./modules/git.nix
               ./modules/neovim.nix
@@ -39,5 +40,7 @@
         };
       };
       linux = self.homeConfigurations.linux.activationPackage;
+      defaultPackage.x86_64-linux = self.linux;
+
     };
 }
